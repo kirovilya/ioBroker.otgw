@@ -61,8 +61,30 @@
         "restartAdapters": ["vis"]
     },
     "native": {
+    	"host": "",
+        "port": 23
     },
     "objects": [
-
+        {
+            "_id":  "info",
+            "type": "channel",
+            "common": {
+                "name": "Information"
+            },
+            "native": {}
+        },
+        {
+            "_id":  "info.connection",
+            "type": "state",
+            "common": {
+                "role":  "indicator.connected",
+                "name":  "If connected to otgw",
+                "type":  "boolean",
+                "read":  true,
+                "write": false,
+                "def":   false
+            },
+            "native": {}
+        }
     ]
 }
