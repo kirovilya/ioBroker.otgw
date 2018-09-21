@@ -1,0 +1,68 @@
+{
+    "common": {
+        "name": "otgw",
+        "version": "0.1.0",
+        "news": {
+            "0.1.0": {
+                "en": "initial adapter",
+                "de": "Initiale Version",
+                "ru": "Первоначальный адаптер",
+                "pt": "Versão inicial",
+                "fr": "Version initiale",
+                "nl": "Eerste release"
+            }
+        },
+		"title": "OpenTherm Gateway adapter",
+        "titleLang": {
+            "en": "OpenTherm Gateway adapter",
+            "de": "OpenTherm Gateway Vorlagenadapter",
+            "ru": "Адаптер OpenTherm Gateway",
+            "pt": "Adaptador OpenTherm Gateway",
+            "nl": "OpenTherm Gateway sjabloonadapter",
+            "fr": "OpenTherm Gateway adaptateur",
+            "it": "Adattatore OpenTherm Gateway",
+            "es": "Adaptador OpenTherm Gateway"
+        },
+        "desc": {
+            "en": "ioBroker OpenTherm Gateway",
+            "de": "ioBroker OpenTherm Gateway",
+            "ru": "ioBroker OpenTherm Gateway",
+            "pt": "OpenTherm Gateway para o ioBroker",
+            "fr": "ioBroker OpenTherm Gateway",
+            "nl": "ioBroker OpenTherm Gateway",
+            "it": "OpenTherm Gateway ioBroker",
+            "es": "OpenTherm Gateway ioBroker"
+        },
+        "authors": [
+            "Kirov Ilya <kirovilya@gmail.com>"
+        ],
+        "docs": {
+            "en": "docs/en/admin.md",
+            "ru": "docs/ru/admin.md",
+            "de": "docs/de/admin.md",
+            "es": "docs/es/admin.md",
+            "it": "docs/it/admin.md",
+            "fr": "docs/fr/admin.md",
+            "nl": "docs/nl/admin.md",
+            "pt": "docs/pt/admin.md"
+        },
+        "platform": "Javascript/Node.js",
+        "mode": "daemon",
+        "icon": "otgw.png",
+        "materialize": true,
+        "enabled": true,
+        "extIcon": "https://raw.githubusercontent.com/kirovilya/ioBroker.otgw/master/admin/otgw.png",
+        "keywords": ["otgw", "vis", "GUI", "graphical", "scada"],
+        "readme": "https://github.com/kirovilya/ioBroker.otgw/blob/master/README.md",
+        "loglevel": "info",
+        "type": "general",
+        "license": "MIT",
+        "messagebox": false,
+        "restartAdapters": ["vis"]
+    },
+    "native": {
+    },
+    "objects": [
+
+    ]
+}
