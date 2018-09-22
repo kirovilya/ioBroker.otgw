@@ -1,5 +1,8 @@
 ![Logo](admin/otgw.png)
 # ioBroker.otgw
+
+OpenTherm Gateway adapter
+for http://otgw.tclcode.com/ project
 =================
 
 
@@ -9,7 +12,7 @@
 ## License
 The MIT License (MIT)
 
-Copyright (c) 2018 Kirov <kirovilya@gmail.com>
+Copyright (c) 2018 Kirov Ilya <kirovilya@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
