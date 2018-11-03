@@ -12,6 +12,27 @@ const utils =    require(__dirname + '/lib/utils'); // Get common adapter utils
 const otgw = require('./lib/otg_api');
 let otgwapi;
 const adapter = new utils.Adapter('otgw');
+const controlStates = [
+    { 
+        id: 'command',
+        name: 'Send command to OTGW',
+        icon: undefined,
+        role: 'command',
+        write: true,
+        read: false,
+        type: 'string',
+    },
+    { 
+        id: 'command_response',
+        name: 'Response on command from OTGW',
+        icon: undefined,
+        role: 'command',
+        write: false,
+        read: true,
+        type: 'string',
+    },
+];
+
 
 adapter.on('unload', function (callback) {
     try {
@@ -36,6 +57,7 @@ function onConnect(data) {
     if (data.found) {
         adapter.log.debug(`Connected to ${data.ip}:${data.port} verison ${data.version}`);
         adapter.setState('info.connection', true);
+        recreateStates();
     } else {
         otgwapi.closePort();
             otgwapi = undefined;
@@ -46,6 +68,23 @@ function onConnect(data) {
 
 function onUpdate(name, value) {
     updateState(name, value);
+}
+
+function recreateStates(){
+    controlStates.forEach((statedesc) => {
+        const common = {
+            name: statedesc.name,
+            type: statedesc.type,
+            unit: statedesc.unit,
+            read: statedesc.read,
+            write: statedesc.write,
+            icon: statedesc.icon,
+            role: statedesc.role,
+            min: statedesc.min,
+            max: statedesc.max,
+        };
+        updateState(statedesc.id, undefined, common);
+    });
 }
 
 
@@ -96,7 +135,33 @@ function updateState(name, value, common) {
     });
 }
 
+adapter.on('stateChange', function (id, state) {
+    // you can use the ack flag to detect if it is status (true) or command (false)
+    if (state && !state.ack) {
+        adapter.log.debug('User stateChange ' + id + ' ' + JSON.stringify(state));
+        const stateKey = id.split('.')[2];
+        switch (stateKey) {
+            case 'command':
+                otgwapi.sendCommand(state.val)
+                    .then((resp) => {
+                        if (resp == true) {
+                            adapter.setState(state.id, '', true);
+                            adapter.setState(state.id+'_response', 'OK', true);
+                        }
+                        adapter.log.debug('Command response:' + JSON.stringify(resp)); 
+                    })
+                    .catch((err) => {
+                        adapter.log.debug('Command error:' + JSON.stringify(err));
+                        adapter.setState(state.id+'_response', JSON.stringify(err), true);
+                    });
+                break;
+        }
+    }
+});
+
+
 function main() {
+    adapter.subscribeStates('*');
 	const host = adapter.config.host;
 	const port = adapter.config.port;
 	if (host && port) {
