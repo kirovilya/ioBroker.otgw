@@ -8,5 +8,19 @@
   ],
   "imageSize": 100,
   "commit": false,
+  "contributors": [
+    {
+      "login": "kirovilya",
+      "name": "Ilya Kirov",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/8360230?v=4",
+      "profile": "https://t.me/goofyk",
+      "contributions": [
+        "infra",
+        "test",
+        "code",
+        "maintenance"
+      ]
+    }
+  ],
   "contributorsPerLine": 7
 }
