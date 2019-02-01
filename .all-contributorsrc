@@ -1,0 +1,25 @@
+{
+  "projectName": "ioBroker.otgw",
+  "projectOwner": "kirovilya",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "kirovilya",
+      "name": "Илья Киров",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/8360230?v=4",
+      "profile": "https://t.me/goofyk",
+      "contributions": [
+        "infra",
+        "test",
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}
