@@ -1,5 +1,7 @@
 ![Logo](admin/otgw.png)
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
+
 # ioBroker.otgw
 
 OpenTherm Gateway adapter
@@ -17,13 +19,9 @@ for http://otgw.tclcode.com/ project
 | [<img src="https://avatars0.githubusercontent.com/u/8360230?v=4" width="100px;" alt="Илья Киров"/><br /><sub><b>Илья Киров</b></sub>](https://t.me/goofyk)<br />[🚇](#infra-kirovilya "Infrastructure (Hosting, Build-Tools, etc)") [⚠️](https://github.com/kirovilya/ioBroker.otgw/commits?author=kirovilya "Tests") [💻](https://github.com/kirovilya/ioBroker.otgw/commits?author=kirovilya "Code") [🚧](#maintenance-kirovilya "Maintenance") |
 | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
-Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
 
 This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!
 
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
 If you contributed in any way, but I've forgotten to add you to this list, please shoot me an e-mail!
 
 ## License
