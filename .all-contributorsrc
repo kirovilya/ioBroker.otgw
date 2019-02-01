@@ -17,7 +17,8 @@
       "contributions": [
         "infra",
         "test",
-        "code"
+        "code",
+        "maintenance"
       ]
     }
   ],
