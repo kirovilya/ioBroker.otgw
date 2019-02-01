@@ -14,7 +14,7 @@ for http://otgw.tclcode.com/ project
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-| [<img src="https://avatars0.githubusercontent.com/u/8360230?v=4" width="100px;" alt="Илья Киров"/><br /><sub><b>Илья Киров</b></sub>](https://t.me/goofyk)<br />[🚇](#infra-kirovilya "Infrastructure (Hosting, Build-Tools, etc)") [⚠️](https://github.com/kirovilya/ioBroker.otgw/commits?author=kirovilya "Tests") [💻](https://github.com/kirovilya/ioBroker.otgw/commits?author=kirovilya "Code") |
+| [<img src="https://avatars0.githubusercontent.com/u/8360230?v=4" width="100px;" alt="Илья Киров"/><br /><sub><b>Илья Киров</b></sub>](https://t.me/goofyk)<br />[🚇](#infra-kirovilya "Infrastructure (Hosting, Build-Tools, etc)") [⚠️](https://github.com/kirovilya/ioBroker.otgw/commits?author=kirovilya "Tests") [💻](https://github.com/kirovilya/ioBroker.otgw/commits?author=kirovilya "Code") [🚧](#maintenance-kirovilya "Maintenance") |
 | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
