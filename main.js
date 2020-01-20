@@ -54,13 +54,14 @@ function debugToAdapter(data) {
 
 function onConnect(data) {
     adapter.log.debug('Result of connect', data);
-    if (data.found) {
+    //if (data.found) {
+    if (data) {
         adapter.log.debug(`Connected to ${data.ip}:${data.port} verison ${data.version}`);
         adapter.setState('info.connection', true);
         recreateStates();
     } else {
         otgwapi.closePort();
-            otgwapi = undefined;
+        otgwapi = undefined;
         adapter.setState('info.connection', false);
         adapter.log.error(`Can not connect to gateway`);
     }
