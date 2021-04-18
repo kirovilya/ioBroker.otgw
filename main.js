@@ -146,14 +146,14 @@ adapter.on('stateChange', function (id, state) {
                 otgwapi.sendCommand(state.val)
                     .then((resp) => {
                         if (resp == true) {
-                            adapter.setState(state.id, '', true);
-                            adapter.setState(state.id+'_response', 'OK', true);
+                            adapter.setState(id, '', true);
+                            adapter.setState(id+'_response', 'OK', true);
                         }
                         adapter.log.debug('Command response:' + JSON.stringify(resp)); 
                     })
                     .catch((err) => {
                         adapter.log.debug('Command error:' + JSON.stringify(err));
-                        adapter.setState(state.id+'_response', JSON.stringify(err), true);
+                        adapter.setState(id+'_response', JSON.stringify(err), true);
                     });
                 break;
         }
