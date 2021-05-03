@@ -68,7 +68,10 @@ function onConnect(data) {
 }
 
 function onUpdate(name, value) {
-    updateState(name, value);
+    const common = {
+        type: typeof(value),
+    };
+    updateState(name, value, common);
 }
 
 function recreateStates(){
