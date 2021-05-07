@@ -149,7 +149,6 @@ adapter.on('stateChange', function (id, state) {
                 otgwapi.sendCommand(state.val)
                     .then((resp) => {
                         if (resp == true) {
-                            adapter.setState(id, '', true);
                             adapter.setState(id+'_response', 'OK', true);
                         }
                         adapter.log.debug('Command response:' + JSON.stringify(resp)); 
